@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>당신은 왕의 대리인입니다 | 주중 매일 묵상</title>
+    
+    <!-- Pretendard 폰트 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Pretendard', 'sans-serif'],
+                    },
+                    colors: {
+                        ivory: {
+                            100: '#FFFDF9', // 본문 배경
+                            200: '#F5F0E6', // 카드 배경
+                            300: '#E8DFD1', // 테두리
+                        },
+                        wood: {
+                            400: '#D4A373', // 밝은 나무색
+                            600: '#A67C52', // 중간 나무색
+                            800: '#5C4033', // 짙은 나무색
+                        },
+                        green: {
+                            600: '#436B4D', // 차분한 녹색
+                            700: '#2E5C31', // 포인트 초록
+                            800: '#1B3B1E', // 진한 초록
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* 가로 스크롤바 숨기기 (요일 탭용) */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* 탭 전환 애니메이션 */
+        .tab-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .tab-content.active {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-[#EAE5DA] font-sans text-gray-800 antialiased selection:bg-green-700 selection:text-white">
+
+    <!-- 모바일 화면용 중앙 정렬 컨테이너 -->
+    <div class="max-w-md mx-auto bg-ivory-100 min-h-screen shadow-2xl relative overflow-hidden flex flex-col">
+        
+        <!-- 상단 헤더 -->
+        <header class="bg-green-800 text-ivory-100 pt-8 pb-4 px-6 rounded-b-3xl shadow-md relative z-20 shrink-0">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-wood-400 opacity-10 rounded-full -mr-10 -mt-10"></div>
+            <p class="text-ivory-300 text-xs font-medium mb-1 tracking-wide uppercase">26.06.22 ~ 06.27</p>
+            <h1 class="text-xl font-bold leading-snug">말씀으로 사는 일주일<br><span class="text-wood-400 text-2xl drop-shadow-sm">왕의 대리인 묵상</span></h1>
+        </header>
+
+        <!-- 요일 탭 네비게이션 -->
+        <nav class="bg-ivory-100 border-b border-ivory-300 sticky top-0 z-10 shrink-0">
+            <ul class="flex overflow-x-auto hide-scrollbar px-2 py-3 gap-2" id="day-tabs">
+                <li><button onclick="switchTab('mon')" class="tab-btn px-4 py-2 rounded-full text-sm font-bold transition-colors bg-green-700 text-white shadow-md" data-day="mon">월요일</button></li>
+                <li><button onclick="switchTab('tue')" class="tab-btn px-4 py-2 rounded-full text-sm font-bold transition-colors bg-ivory-200 text-wood-600 hover:bg-ivory-300" data-day="tue">화요일</button></li>
+                <li><button onclick="switchTab('wed')" class="tab-btn px-4 py-2 rounded-full text-sm font-bold transition-colors bg-ivory-200 text-wood-600 hover:bg-ivory-300" data-day="wed">수요일</button></li>
+                <li><button onclick="switchTab('thu')" class="tab-btn px-4 py-2 rounded-full text-sm font-bold transition-colors bg-ivory-200 text-wood-600 hover:bg-ivory-300" data-day="thu">목요일</button></li>
+                <li><button onclick="switchTab('fri')" class="tab-btn px-4 py-2 rounded-full text-sm font-bold transition-colors bg-ivory-200 text-wood-600 hover:bg-ivory-300" data-day="fri">금요일</button></li>
+                <li><button onclick="switchTab('sat')" class="tab-btn px-4 py-2 rounded-full text-sm font-bold transition-colors bg-ivory-200 text-wood-600 hover:bg-ivory-300" data-day="sat">토요일</button></li>
+            </ul>
+        </nav>
+
+        <!-- 본문 컨텐츠 영역 -->
+        <main class="flex-grow overflow-y-auto p-5 pb-20 relative">
+
+            <!-- 월요일 -->
+            <article id="mon" class="tab-content active">
+                <div class="mb-4">
+                    <span class="inline-block px-2 py-1 bg-wood-400 text-white text-xs font-bold rounded mb-2">월요일 묵상</span>
+                    <h2 class="text-2xl font-bold text-green-800 leading-tight">무거운 짐 내려놓기</h2>
+                </div>
+
+                <div class="bg-ivory-200 p-4 rounded-xl border border-ivory-300 mb-6 shadow-sm">
+                    <p class="text-sm font-bold text-green-700 mb-2">📖 마태복음 11:28-30</p>
+                    <p class="text-sm text-gray-700 leading-relaxed italic">
+                        "수고하고 무거운 짐 진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라 나는 마음이 온유하고 겸손하니 나의 멍에를 메고 내게 배우라 그리하면 너희 마음이 쉼을 얻으리니 이는 내 멍에는 쉽고 내 짐은 가벼움이라 하시니라"
+                    </p>
+                </div>
+
+                <div class="space-y-5">
+                    <section>
+                        <h3 class="text-lg font-bold text-wood-800 flex items-center mb-2"><span class="mr-2 text-xl">🔍</span> 말씀의 깊은 뜻</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            당시 유대인들은 바리새인들이 만들어 놓은 수많은 율법의 규칙들을 지켜내야 했고, 로마 제국의 무거운 세금에 짓눌려 있었습니다. 예수님은 스스로 '인생의 주인공'이 되어 스스로 구원을 이루어내려는 그들의 고단함을 아셨습니다. 예수님은 "내가 옳음을 증명해야 하는 짐"을 내려놓고, 예수님이 지워주시는 '대리인이라는 멍에'를 메라고 초청하십니다.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3 class="text-lg font-bold text-wood-800 flex items-center mb-2"><span class="mr-2 text-xl">💡</span> 삶으로 가져오기</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-3">
+                            우리가 피곤하고 지치는 이유는 혼자 지도록 설계되지 않은 무게를 억지로 지고 있기 때문입니다. '내가 책임져야 한다', '내가 이겨야 한다'는 주인공의 착각을 내려놓으십시오. 우리는 인생의 감독이 아니라 그분이 맡겨주신 배역을 살아내는 대리인입니다.
+                        </p>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-green-600 shadow-sm">
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                <strong>[오늘의 예화]</strong> 공항에서 무거운 캐리어를 끝까지 자기 손으로 끌고 가겠다며 낑낑대는 어린아이가 있습니다. 아빠가 대신 들어주겠다고 해도 고집을 부립니다. 결국 땀방울을 흘리며 주저앉고 맙니다. 아빠에게 손잡이를 넘겨주면, 아이는 아빠 손을 잡고 홀가분하게 공항을 걸어갈 수 있습니다.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="bg-ivory-200 p-4 rounded-xl">
+                        <h3 class="font-bold text-green-800 mb-2">🤔 묵상 질문</h3>
+                        <ol class="list-decimal pl-5 text-sm text-gray-700 space-y-2">
+                            <li>최근 나를 가장 지치게 만들었던 '내가 책임져야 한다'는 무거운 짐은 무엇입니까?</li>
+                            <li>오늘 하루, 그 짐을 감독이신 예수님께 맡겨드린다는 것은 구체적으로 어떻게 행동하는 것일까요?</li>
+                        </ol>
+                    </section>
+
+                    <section class="border-2 border-wood-400 p-4 rounded-xl bg-[#FFFDF9]">
+                        <h3 class="font-bold text-wood-800 mb-2 flex items-center"><span class="mr-2">🙏</span> 오늘의 결단과 기도</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            "주님, 저는 내 인생의 주관자가 아님을 고백합니다. 내가 나를 지켜야 한다는 불안감, 내가 옳음을 증명해야 한다는 무거운 자존심의 짐을 오늘 주님 발 앞에 내려놓습니다. 나를 위해 십자가를 지신 주님의 사랑 안에서 참된 안식을 누리는 하루가 되게 하옵소서. 예수님의 이름으로 기도합니다. 아멘."
+                        </p>
+                    </section>
+                </div>
+            </article>
+
+            <!-- 화요일 -->
+            <article id="tue" class="tab-content">
+                <div class="mb-4">
+                    <span class="inline-block px-2 py-1 bg-wood-400 text-white text-xs font-bold rounded mb-2">화요일 묵상</span>
+                    <h2 class="text-2xl font-bold text-green-800 leading-tight">왕의 싸움 싸우기</h2>
+                </div>
+
+                <div class="bg-ivory-200 p-4 rounded-xl border border-ivory-300 mb-6 shadow-sm">
+                    <p class="text-sm font-bold text-green-700 mb-2">📖 베드로전서 2:19-21</p>
+                    <p class="text-sm text-gray-700 leading-relaxed italic">
+                        "부당하게 고난을 받아도 하나님을 생각함으로 슬픔을 참으면 이는 아름다우나... 선을 행함으로 고난을 받고 참으면 이는 하나님 앞에 아름다우니라 이를 위하여 너희가 부르심을 받았으니 그리스도도 너희를 위하여 고난을 받으사 너희에게 본을 끼쳐 그 자취를 따라오게 하려 하셨느니라"
+                    </p>
+                </div>
+
+                <div class="space-y-5">
+                    <section>
+                        <h3 class="text-lg font-bold text-wood-800 flex items-center mb-2"><span class="mr-2 text-xl">🔍</span> 말씀의 깊은 뜻</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            베드로 사도는 로마 제국의 억압 속에서 억울한 일을 당하는 초대교회 성도들에게 편지를 썼습니다. 그는 억울할 때 똑같이 폭력으로 맞서지 말라고 합니다. 왜냐하면 예수님께서 가장 부당한 십자가의 고난 앞에서도 욕하지 않으시고, 공의로 심판하시는 하나님께 모든 것을 의탁하셨기 때문입니다(23절). 
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3 class="text-lg font-bold text-wood-800 flex items-center mb-2"><span class="mr-2 text-xl">💡</span> 삶으로 가져오기</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-3">
+                            직장에서 불합리한 상사를 만났을 때, 우리는 내 자존심을 지키기 위해 혈기를 부리거나 편법을 씁니다. 그러나 우리는 '왕의 대리인'입니다. 대리인은 내 싸움을 하지 않습니다. 불의를 보고 참는 것이 아니라, 갚아주시는 분이 하나님이심을 믿고 묵묵히 선을 행하며 나의 거룩한 자리를 지켜내는 것, 그것이 가장 강력한 '왕의 싸움'입니다.
+                        </p>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-green-600 shadow-sm">
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                <strong>[오늘의 예화]</strong> 진정한 무술의 고수(프로 격투기 선수)는 길거리에서 술 취한 동네 불량배가 시비를 걸고 욕을 한다고 해서 같이 주먹다짐을 하지 않습니다. 고수는 자신의 정체성과 실력을 알기에, 그 얄팍한 도발에 자신의 격을 떨어뜨리지 않고 웃어넘길 수 있는 여유가 있습니다.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="bg-ivory-200 p-4 rounded-xl">
+                        <h3 class="font-bold text-green-800 mb-2">🤔 묵상 질문</h3>
+                        <ol class="list-decimal pl-5 text-sm text-gray-700 space-y-2">
+                            <li>최근 억울하고 불합리한 일 앞에서 내 혈기와 자존심으로 맞서려 했던 적이 있습니까?</li>
+                            <li>하나님이 이 상황을 다 보고 계신다면, 오늘 나는 나를 화나게 하는 사람에게 어떻게 반응해야 할까요?</li>
+                        </ol>
+                    </section>
+
+                    <section class="border-2 border-wood-400 p-4 rounded-xl bg-[#FFFDF9]">
+                        <h3 class="font-bold text-wood-800 mb-2 flex items-center"><span class="mr-2">🙏</span> 오늘의 결단과 기도</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            "공의의 하나님, 억울하고 답답한 상황 속에서도 내 혈기가 아니라 주님의 십자가를 바라보게 하소서. 악을 악으로 갚지 않고, 모든 것을 심판하시는 주님께 의탁하는 믿음을 주시어, 오늘 나의 일터에서 거룩한 대리인의 품격을 지켜내게 하옵소서."
+                        </p>
+                    </section>
+                </div>
+            </article>
+
+            <!-- 수요일 -->
+            <article id="wed" class="tab-content">
+                <div class="mb-4">
+                    <span class="inline-block px-2 py-1 bg-wood-400 text-white text-xs font-bold rounded mb-2">수요일 묵상</span>
+                    <h2 class="text-2xl font-bold text-green-800 leading-tight">하나님의 온기 전하기</h2>
+                </div>
+
+                <div class="bg-ivory-200 p-4 rounded-xl border border-ivory-300 mb-6 shadow-sm">
+                    <p class="text-sm font-bold text-green-700 mb-2">📖 마태복음 5:14-16</p>
+                    <p class="text-sm text-gray-700 leading-relaxed italic">
+                        "너희는 세상의 빛이라 산 위에 있는 동네가 숨겨지지 못할 것이요... 이같이 너희 빛이 사람 앞에 비치게 하여 그들로 너희 착한 행실을 보고 하늘에 계신 너희 아버지께 영광을 돌리게 하라"
+                    </p>
+                </div>
+
+                <div class="space-y-5">
+                    <section>
+                        <h3 class="text-lg font-bold text-wood-800 flex items-center mb-2"><span class="mr-2 text-xl">🔍</span> 말씀의 깊은 뜻</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            예수님은 산상수훈에서 제자들의 정체성을 '빛'이라고 규정하십니다. 빛은 자신을 드러내기 위해 존재하지 않습니다. 어둠 속에 있는 다른 사물들을 밝혀주고 길을 안내하기 위해 존재합니다. 우리의 착한 행실은 나의 도덕적 우월함을 뽐내기 위함이 아니라, 캄캄한 세상 사람들에게 '하늘 아버지의 살아계심'을 보여주기 위한 반사경입니다.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3 class="text-lg font-bold text-wood-800 flex items-center mb-2"><span class="mr-2 text-xl">💡</span> 삶으로 가져오기</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-3">
+                            '하나님의 형상(첼렘)'으로 지음받았다는 것은, 보이지 않는 하나님의 성품을 눈에 보이게 드러내는 거울이라는 뜻입니다. 상처받은 동료 곁에 가만히 앉아주고, 울고 있는 아이를 진심으로 안아줄 때, 세상 사람들은 우리의 그 작은 손길 속에서 '우리를 포기하지 않으시는 하나님의 온기'를 피부로 느끼게 됩니다.
+                        </p>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-green-600 shadow-sm">
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                <strong>[오늘의 예화]</strong> 밤하늘을 은은하게 비추는 달을 보며 우리는 아름답다고 느낍니다. 하지만 달은 스스로 빛을 내는 발광체가 아닙니다. 보이지 않는 저 너머에 있는 거대한 태양의 빛을 표면으로 반사할 뿐입니다. 우리는 세상의 캄캄한 밤을 비추는 거룩한 반사경입니다.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="bg-ivory-200 p-4 rounded-xl">
+                        <h3 class="font-bold text-green-800 mb-2">🤔 묵상 질문</h3>
+                        <ol class="list-decimal pl-5 text-sm text-gray-700 space-y-2">
+                            <li>오늘 내가 만날 사람 중에, 하나님의 따뜻한 위로와 온기가 가장 필요한 사람은 누구입니까?</li>
+                            <li>그 사람에게 하나님의 온기를 전하기 위해 내가 오늘 할 수 있는 작은 말이나 행동은 무엇일까요?</li>
+                        </ol>
+                    </section>
+
+                    <section class="border-2 border-wood-400 p-4 rounded-xl bg-[#FFFDF9]">
+                        <h3 class="font-bold text-wood-800 mb-2 flex items-center"><span class="mr-2">🙏</span> 오늘의 결단과 기도</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            "주님, 오늘 나의 일터와 가정이 캄캄한 밤처럼 느껴질지라도, 내가 먼저 그곳에 빛을 비추는 달빛이 되게 하소서. 나의 따뜻한 말 한마디, 작은 배려 하나를 통해 누군가가 살아계신 하나님의 사랑을 느끼게 하옵소서."
+                        </p>
+                    </section>
+                </div>
+            </article>
+
+            <!-- 목요일 -->
+            <article id="thu" class="tab-content">
+                <div class="mb-4">
+                    <span class="inline-block px-2 py-1 bg-wood-400 text-white text-xs font-bold rounded mb-2">목요일 묵상</span>
+                    <h2 class="text-2xl font-bold text-green-800 leading-tight">진짜 공급자 신뢰하기</h2>
+                </div>
+
+                <div class="bg-ivory-200 p-4 rounded-xl border border-ivory-300 mb-6 shadow-sm">
+                    <p class="text-sm font-bold text-green-700 mb-2">📖 마태복음 6:31-33</p>
+                    <p class="text-sm text-gray-700 leading-relaxed italic">
+                        "그러므로 염려하여 이르기를 무엇을 먹을까 무엇을 마실까 무엇을 입을까 하지 말라 이는 다 이방인들이 구하는 것이라 너희 하늘 아버지께서 이 모든 것이 너희에게 있어야 할 줄을 아시느니라 그런즉 너희는 먼저 그의 나라와 그의 의를 구하라 그리하면 이 모든 것을 너희에게 더하시리라"
+                    </p>
+                </div>
+
+                <div class="space-y-5">
+                    <section>
+                        <h3 class="text-lg font-bold text-wood-800 flex items-center mb-2"><span class="mr-2 text-xl">🔍</span> 말씀의 깊은 뜻</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            예수님은 생존의 공포(무엇을 먹을까)에 사로잡혀 사는 것이 하나님이 없는 '이방인'의 특징이라고 하셨습니다. 하나님 나라의 백성은 고아처럼 스스로 밥줄을 챙기는 자들이 아닙니다. 창조주께서 우리의 쓸 것을 이미 다 아신다는 사실을 믿고, 생존의 염려가 아니라 '하나님의 통치(그의 나라)'가 내 삶에 이루어지도록 헌신하는 자들입니다.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3 class="text-lg font-bold text-wood-800 flex items-center mb-2"><span class="mr-2 text-xl">💡</span> 삶으로 가져오기</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-3">
+                            세상 방식대로 양보하고 섬기다가는 남들에게 뒤처지고 굶어 죽을 것 같은 두려움이 찾아옵니다. 직장 상사의 눈밖에 나면 큰일이 날 것 같습니다. 그러나 하나님은 우리에게 "네가 나의 대본대로 세상을 살리면, 너의 먹을거리는 내가 책임지겠다(창 1:29)"고 약속하셨습니다. 내 밥줄은 세상이 아니라 하나님이 쥐고 계십니다.
+                        </p>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-green-600 shadow-sm">
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                <strong>[오늘의 예화]</strong> 치열한 영화 촬영장에서 명배우는 점심 식사로 무엇을 사 먹어야 할지, 내 돈이 얼마나 남았는지 걱정하느라 연기를 망치지 않습니다. 영화의 제작자와 감독이 배우들을 위해 가장 훌륭한 밥차(케이터링)를 완벽하게 세팅해 두었다는 것을 알기 때문입니다.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="bg-ivory-200 p-4 rounded-xl">
+                        <h3 class="font-bold text-green-800 mb-2">🤔 묵상 질문</h3>
+                        <ol class="list-decimal pl-5 text-sm text-gray-700 space-y-2">
+                            <li>나로 하여금 세상과 타협하게 만드는 가장 큰 두려움(재정, 승진, 인간관계 등)은 무엇입니까?</li>
+                            <li>"내 인생의 밥줄은 하나님이 쥐고 계신다"는 사실을 믿는다면, 오늘 내가 포기할 수 있는 이기적인 욕심은 무엇일까요?</li>
+                        </ol>
+                    </section>
+
+                    <section class="border-2 border-wood-400 p-4 rounded-xl bg-[#FFFDF9]">
+                        <h3 class="font-bold text-wood-800 mb-2 flex items-center"><span class="mr-2">🙏</span> 오늘의 결단과 기도</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            "채우시고 입히시는 하나님, 생존에 대한 두려움 때문에 이기적으로 움켜쥐려 했던 손을 폅니다. 나의 먹을거리와 나의 미래는 세상의 권력자나 내 통장 잔고에 있지 않음을 선포합니다. 오늘 하루, 하나님이 책임지심을 굳게 믿고 담대하게 이웃을 섬기며 살게 하소서."
+                        </p>
+                    </section>
+                </div>
+            </article>
+
+            <!-- 금요일 -->
+            <article id="fri" class="tab-content">
+                <div class="mb-4">
+                    <span class="inline-block px-2 py-1 bg-wood-400 text-white text-xs font-bold rounded mb-2">금요일 묵상</span>
+                    <h2 class="text-2xl font-bold text-green-800 leading-tight">예고편의 삶 살기</h2>
+                </div>
+
+                <div class="bg-ivory-200 p-4 rounded-xl border border-ivory-300 mb-6 shadow-sm">
+                    <p class="text-sm font-bold text-green-700 mb-2">📖 골로새서 3:22-24</p>
+                    <p class="text-sm text-gray-700 leading-relaxed italic">
+                        "...눈가림만 하여 사람을 기쁘게 하는 자처럼 하지 말고 오직 주를 두려워하여 성실한 마음으로 하라 무슨 일을 하든지 마음을 다하여 주께 하듯 하고 사람에게 하듯 하지 말라 이는 기업의 상을 주께 받을 줄 아나니 너희는 주 그리스도를 섬기느니라"
+                    </p>
+                </div>
+
+                <div class="space-y-5">
+                    <section>
+                        <h3 class="text-lg font-bold text-wood-800 flex items-center mb-2"><span class="mr-2 text-xl">🔍</span> 말씀의 깊은 뜻</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            이 말씀은 당시 가장 비참하고 억압받던 계층인 '노예'들에게 주신 권면입니다. 아무도 알아주지 않는 팍팍한 노동조차도, 사람의 눈치를 보지 않고 '주님을 섬기는 마음'으로 해낼 때 그것은 영광스러운 하늘의 상을 받는 거룩한 사역으로 바뀝니다. 일상의 모든 순간이 곧 예배라는 선언입니다.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3 class="text-lg font-bold text-wood-800 flex items-center mb-2"><span class="mr-2 text-xl">💡</span> 삶으로 가져오기</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-3">
+                            요양원 병실, 악취 나는 쓰레기차, 고장 난 에어컨 앞, 떼쓰는 어린이집. 세상은 우리의 이 수고를 엑스트라의 초라한 노동이라 부르지만 하나님은 다르게 보십니다. 타락으로 망가진 이 땅에 십자가의 사랑으로 질서를 세우는 우리의 일터는, 장차 주님이 완성하실 하나님 나라를 세상에 미리 보여주는 가장 위대한 '예고편'입니다.
+                        </p>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-green-600 shadow-sm">
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                <strong>[오늘의 예화]</strong> 뜨거운 태양 아래서 돌을 쪼는 세 명의 석공이 있었습니다. 무얼 하냐고 묻자 첫 번째 사람은 "보면 몰라요? 밥 벌어먹으려고 돌을 깨죠"라고 짜증을 냈고, 두 번째는 "기술을 발휘해 가장 각진 돌을 만들고 있습니다"라고 자랑했습니다. 그러나 세 번째 사람은 땀을 닦으며 환하게 웃었습니다. "저는 지금 역사에 남을 위대한 성당을 짓고 있습니다."
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="bg-ivory-200 p-4 rounded-xl">
+                        <h3 class="font-bold text-green-800 mb-2">🤔 묵상 질문</h3>
+                        <ol class="list-decimal pl-5 text-sm text-gray-700 space-y-2">
+                            <li>나의 직업과 가사 노동을 단순히 돈을 버는 수단으로 생각합니까, 아니면 하나님 나라를 세우는 과정으로 생각합니까?</li>
+                            <li>초라해 보이는 나의 오늘 일상 속에, 어떤 성실함으로 임할 때 주님이 기뻐하실까요?</li>
+                        </ol>
+                    </section>
+
+                    <section class="border-2 border-wood-400 p-4 rounded-xl bg-[#FFFDF9]">
+                        <h3 class="font-bold text-wood-800 mb-2 flex items-center"><span class="mr-2">🙏</span> 오늘의 결단과 기도</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            "주님, 아무도 알아주지 않고 쳇바퀴 도는 것 같은 나의 일상을 새롭게 바라보게 하소서. 내가 밟고 있는 이 땀 냄새나는 일터가 하나님 나라의 거룩한 예고편임을 믿고, 오늘 내게 주어진 일을 주님께 하듯 성실함과 기쁨으로 감당하게 하옵소서."
+                        </p>
+                    </section>
+                </div>
+            </article>
+
+            <!-- 토요일 -->
+            <article id="sat" class="tab-content">
+                <div class="mb-4">
+                    <span class="inline-block px-2 py-1 bg-wood-400 text-white text-xs font-bold rounded mb-2">토요일 묵상</span>
+                    <h2 class="text-2xl font-bold text-green-800 leading-tight">은혜의 침상 회복하기</h2>
+                </div>
+
+                <div class="bg-ivory-200 p-4 rounded-xl border border-ivory-300 mb-6 shadow-sm">
+                    <p class="text-sm font-bold text-green-700 mb-2">📖 시편 4:4-8</p>
+                    <p class="text-sm text-gray-700 leading-relaxed italic">
+                        "너희는 떨며 범죄하지 말지어다 자리에 누워 심중에 말하고 잠잠할지어다... 내가 평안히 눕고 자기도 하리니 나를 안전히 살게 하시는 이는 오직 여호와이시니라"
+                    </p>
+                </div>
+
+                <div class="space-y-5">
+                    <section>
+                        <h3 class="text-lg font-bold text-wood-800 flex items-center mb-2"><span class="mr-2 text-xl">🔍</span> 말씀의 깊은 뜻</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            다윗은 아들 압살롬의 반역으로 목숨을 걸고 도망치던 캄캄한 밤에 이 시편을 지었습니다. 엄청난 분노와 두려움이 몰려오는 밤이었지만, 그는 떨며 범죄하지 않고 자리에 누워 '내 마음의 소리를 주님께 토로하며' 잠잠히 머물렀습니다. 그 결과, 원수들이 포위한 상황 속에서도 그는 오직 주님이 주시는 완전한 샬롬과 단잠을 누립니다.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3 class="text-lg font-bold text-wood-800 flex items-center mb-2"><span class="mr-2 text-xl">💡</span> 삶으로 가져오기</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed mb-3">
+                            우리는 밤에 침상에 누웠을 때, 다윗처럼 주님을 찾기보다 핸드폰을 집어 듭니다. 하루 종일 지친 내 영혼의 복잡한 감정들을 유튜브와 SNS의 소음으로 덮어버리려 합니다. 하지만 그럴수록 더 공허해질 뿐입니다. 토요일 밤은 내일의 주일 예배를 준비하는 시간입니다. 핸드폰 대신 주님과 대화하며 한 주간의 대본을 올려드리는 침상이 되어야 합니다.
+                        </p>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-green-600 shadow-sm">
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                <strong>[오늘의 예화]</strong> 배터리가 5%밖에 남지 않은 스마트폰은 아무리 겉을 예쁘게 닦아주어도 다음 날 쓸 수 없습니다. 반드시 밤새 충전기에 꽂아두어야 에너지가 채워집니다. 우리의 영혼도 마찬가지입니다. 세상의 소음에 꽂혀있던 플러그를 뽑아 창조주 하나님께 연결할 때, 참된 안식과 회복이 일어납니다.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="bg-ivory-200 p-4 rounded-xl">
+                        <h3 class="font-bold text-green-800 mb-2">🤔 묵상 질문</h3>
+                        <ol class="list-decimal pl-5 text-sm text-gray-700 space-y-2">
+                            <li>자기 전 침상에 누웠을 때 나의 마음을 주로 채우고 있는 생각이나 영상은 무엇입니까?</li>
+                            <li>내일 주일 예배를 기대하며, 오늘 밤 내 복잡한 마음을 주님께 어떻게 토로하며 잠들 수 있을까요?</li>
+                        </ol>
+                    </section>
+
+                    <section class="border-2 border-wood-400 p-4 rounded-xl bg-[#FFFDF9]">
+                        <h3 class="font-bold text-wood-800 mb-2 flex items-center"><span class="mr-2">🙏</span> 오늘의 결단과 기도</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            "나의 피난처 되시는 하나님, 한 주간 내 마음을 분주하게 했던 세상의 근심과 소음들을 이 침상 위에 다 내려놓습니다. 오늘 밤은 스마트폰을 내려놓고 주님의 품 안에서 평안히 잠들게 하시고, 내일 거룩한 주일 예배를 통해 내 삶의 찢어진 대본이 온전히 회복되는 기쁨을 누리게 하소서."
+                        </p>
+                    </section>
+                </div>
+            </article>
+
+        </main>
+        
+        <footer class="bg-ivory-200 border-t border-ivory-300 p-4 text-center text-xs text-wood-600 shrink-0">
+            <p>매일 주어지는 나의 일상이<br>가장 위대한 하나님 나라의 예고편입니다.</p>
+        </footer>
+    </div>
+
+    <script>
+        function switchTab(dayId) {
+            // 모든 탭 버튼과 컨텐츠 초기화
+            const tabs = document.querySelectorAll('.tab-btn');
+            const contents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-green-700', 'text-white', 'shadow-md');
+                tab.classList.add('bg-ivory-200', 'text-wood-600');
+            });
+            
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // 선택된 탭 활성화
+            const selectedBtn = document.querySelector(`.tab-btn[data-day="${dayId}"]`);
+            const selectedContent = document.getElementById(dayId);
+            
+            selectedBtn.classList.remove('bg-ivory-200', 'text-wood-600');
+            selectedBtn.classList.add('bg-green-700', 'text-white', 'shadow-md');
+            
+            // 부드러운 전환을 위해 약간의 딜레이
+            setTimeout(() => {
+                selectedContent.classList.add('active');
+                // 스크롤 맨 위로
+                document.querySelector('main').scrollTop = 0;
+            }, 50);
+
+            // 선택된 버튼이 화면 중앙에 오도록 스크롤 이동
+            selectedBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+
+        // 요일에 맞게 초기 탭 설정 (기본값 월요일, 실제 요일에 맞춰 설정도 가능)
+        document.addEventListener('DOMContentLoaded', () => {
+            const today = new Date().getDay(); // 0:일, 1:월, ... 6:토
+            const days = ['sat', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+            let currentDay = days[today];
+            
+            // 주일(일요일)인 경우 월요일 탭을 보여줌
+            if(today === 0) currentDay = 'mon';
+
+            switchTab(currentDay);
+        });
+    </script>
+</body>
+</html>
